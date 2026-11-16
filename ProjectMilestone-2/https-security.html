@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--
+  File: https-security.html
+  Page: HTTPS and Security
+  Project: IT 3203 Web Development, Milestone 1
+  Author: Julien McDaniel
+  Purpose: How HTTPS and TLS protect web traffic.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How HTTPS and TLS protect web traffic.">
+  <title>HTTPS and Security | The Evolution of HTTP</title>
+  <!-- One shared style sheet for the whole site -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+  <!-- Site header: logo and main menu, the same on every page -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">HTTP</span>
+        <span class="brand-name">The Evolution of HTTP</span>
+      </a>
+      <nav class="main-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-http-works.html">How HTTP Works</a></li>
+          <li><a href="http-versions.html">HTTP Versions</a></li>
+          <li><a href="https-security.html" class="active">HTTPS and Security</a></li>
+          <li><a href="key-concepts.html">Key Concepts</a></li>
+          <li><a href="quiz/index.html">Quiz</a></li>
+          <li><a href="references.html">References</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page banner with the page title and a short summary -->
+  <div class="page-banner">
+    <div class="container">
+      <p class="eyebrow">Topic 3</p>
+      <h1>HTTPS and Security</h1>
+      <p class="lead">Plain HTTP sends data as readable text. HTTPS adds encryption so passwords, payments, and personal information stay private while they travel across the internet.</p>
+    </div>
+  </div>
+
+  <!-- Two column layout (CSS grid): main content and sidebar -->
+  <div class="container page-layout">
+    <main class="content">
+        <section id="adds" class="content-section">
+          <h2>What HTTPS Adds</h2>
+          <p>HTTPS is HTTP sent through a secure layer called TLS (Transport Layer Security). TLS gives three protections:</p>
+          <ul class="feature-grid">
+            <li class="feature"><h3>Encryption</h3><p>Other people on the network cannot read the data.</p></li>
+            <li class="feature"><h3>Integrity</h3><p>The data cannot be changed on the way without being noticed.</p></li>
+            <li class="feature"><h3>Authentication</h3><p>A certificate proves the site is who it says it is.</p></li>
+          </ul>
+        </section>
+
+        <section id="handshake" class="content-section">
+          <h2>How a Secure Connection Starts</h2>
+          <ol class="steps">
+            <li>The browser connects and asks for a secure session.</li>
+            <li>The server sends its certificate, which is signed by a trusted certificate authority.</li>
+            <li>The browser checks the certificate.</li>
+            <li>Both sides agree on keys and start sending encrypted HTTP messages.</li>
+          </ol>
+        </section>
+
+        <section id="compare" class="content-section">
+          <h2>HTTP Compared to HTTPS</h2>
+          <div class="table-wrap">
+            <table class="data-table">
+              <caption>Table 3. HTTP and HTTPS side by side</caption>
+              <thead>
+                <tr><th>Feature</th><th>HTTP</th><th>HTTPS</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Default port</td><td>80</td><td>443</td></tr>
+                <tr><td>Encryption</td><td>None</td><td>TLS</td></tr>
+                <tr><td>Certificate</td><td>Not needed</td><td>Required</td></tr>
+                <tr><td>Browser display</td><td>"Not secure" warning</td><td>Secure connection</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="default" class="content-section">
+          <h2>Why HTTPS Became the Default</h2>
+          <p>Free certificate services like Let's Encrypt made HTTPS easy for any site to use.
+            Browsers now warn users about plain HTTP pages, and search engines give secure sites a
+            small ranking boost. HTTP/2 is used over HTTPS in all major browsers, and HTTP/3 always
+            includes encryption, so newer HTTP versions and security now go together.</p>
+        </section>
+
+        <!-- Previous and next page links -->
+        <div class="pager">
+          <a class="pager-link" href="http-versions.html">&larr; HTTP Versions</a>
+          <a class="pager-link" href="key-concepts.html">Key Concepts &rarr;</a>
+        </div>
+    </main>
+
+    <!-- Sidebar: links to each section on this page -->
+    <aside class="sidebar">
+      <div class="side-panel">
+        <h2>On This Page</h2>
+        <ol>
+            <li><a href="#adds">What HTTPS Adds</a></li>
+            <li><a href="#handshake">How a Secure Connection Starts</a></li>
+            <li><a href="#compare">HTTP Compared to HTTPS</a></li>
+            <li><a href="#default">Why HTTPS Became the Default</a></li>
+        </ol>
+      </div>
+      <div class="side-panel side-note">
+        <h2>Explore</h2>
+        <p>New to HTTP? Start with <a href="how-http-works.html">How HTTP Works</a>, then read the <a href="key-concepts.html">Key Concepts</a>.</p>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Site footer: the same on every page, includes the class project note -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-title">The Evolution of HTTP</p>
+        <p>A research site on how the web's main protocol has changed from 1991 to today.</p>
+      </div>
+      <div>
+        <p class="footer-title">Pages</p>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-http-works.html">How HTTP Works</a></li>
+          <li><a href="http-versions.html">HTTP Versions</a></li>
+          <li><a href="https-security.html">HTTPS and Security</a></li>
+          <li><a href="key-concepts.html">Key Concepts</a></li>
+          <li><a href="references.html">References</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-title">Class Project</p>
+        <p>This site is a class project for
+          <a href="https://ksuweb.github.io/IT3203/">IT 3203 Web Development</a>
+          at Kennesaw State University.</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Julien McDaniel</p>
+      <p><a href="#top">Back to top</a></p>
+    </div>
+  </footer>
+</body>
+</html>

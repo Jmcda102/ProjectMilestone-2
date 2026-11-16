@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!--
+  File: index.html
+  Page: Home
+  Project: IT 3203 Web Development, Milestone 1
+  Author: Julien McDaniel
+  Purpose: Cover page for a research site on the evolution of HTTP.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cover page for a research site on the evolution of HTTP.">
+  <title>Home | The Evolution of HTTP</title>
+  <!-- One shared style sheet for the whole site -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+  <!-- Site header: logo and main menu, the same on every page -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">HTTP</span>
+        <span class="brand-name">The Evolution of HTTP</span>
+      </a>
+      <nav class="main-menu">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="how-http-works.html">How HTTP Works</a></li>
+          <li><a href="http-versions.html">HTTP Versions</a></li>
+          <li><a href="https-security.html">HTTPS and Security</a></li>
+          <li><a href="key-concepts.html">Key Concepts</a></li>
+          <li><a href="quiz/index.html">Quiz</a></li>
+          <li><a href="references.html">References</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero: site title, short intro, and a sample HTTP message -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow hero-label">IT 3203 Research Project</p>
+          <h1>The Evolution of HTTP</h1>
+          <p class="hero-lead">How the protocol behind every web page grew from a one line request
+            in 1991 into the fast, encrypted system that runs the modern internet.</p>
+          <p>
+            <a class="button" href="how-http-works.html">Start Reading</a>
+            <a class="button button-outline" href="key-concepts.html">Key Concepts</a>
+          </p>
+        </div>
+        <!-- Box showing a sample request and response -->
+        <div class="code-box">
+          <p class="code-title">A simple HTTP exchange</p>
+          <pre>
+Request from the browser:
+GET /index.html HTTP/1.1
+Host: www.example.com
+
+Response from the server:
+HTTP/1.1 200 OK
+Content-Type: text/html</pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick facts strip -->
+    <div class="stats">
+      <div class="container stats-grid">
+        <div class="stat"><p class="stat-num">1991</p><p class="stat-label">First version, HTTP/0.9</p></div>
+        <div class="stat"><p class="stat-num">5</p><p class="stat-label">Major versions released</p></div>
+        <div class="stat"><p class="stat-num">443</p><p class="stat-label">Default port for HTTPS</p></div>
+        <div class="stat"><p class="stat-num">2022</p><p class="stat-label">HTTP/3 becomes a standard</p></div>
+      </div>
+    </div>
+
+    <!-- Abstract -->
+    <section class="section">
+      <div class="container narrow">
+        <p class="eyebrow">Abstract</p>
+        <h2>What this research covers</h2>
+        <p class="abstract">The Hypertext Transfer Protocol (HTTP) is the set of rules browsers and
+          servers use to exchange web pages, images, and data. It started in 1991 as a one line
+          request for a plain text page. Since then it has gone through several major versions:
+          HTTP/1.0, HTTP/1.1, HTTP/2, and HTTP/3. Each version solved problems with speed,
+          reliability, or security as the web grew. This site explains how HTTP works, how each
+          version changed it, and why HTTPS is now the normal way to browse.</p>
+      </div>
+    </section>
+
+    <!-- Table of contents shown as cards (CSS grid) -->
+    <section class="section section-alt">
+      <div class="container">
+        <p class="eyebrow">Table of Contents</p>
+        <h2>Explore the topics</h2>
+        <ol class="card-grid">
+          <li class="card">
+            <p class="card-num">01</p>
+            <h3><a href="how-http-works.html">How HTTP Works</a></h3>
+            <p>Requests, responses, methods, and status codes.</p>
+          </li>
+          <li class="card">
+            <p class="card-num">02</p>
+            <h3><a href="http-versions.html">HTTP Versions</a></h3>
+            <p>The path from HTTP/0.9 to HTTP/3.</p>
+          </li>
+          <li class="card">
+            <p class="card-num">03</p>
+            <h3><a href="https-security.html">HTTPS and Security</a></h3>
+            <p>How encryption protects web traffic.</p>
+          </li>
+          <li class="card">
+            <p class="card-num">04</p>
+            <h3><a href="key-concepts.html">Key Concepts</a></h3>
+            <p>Seven core ideas, explained simply.</p>
+          </li>
+          <li class="card">
+            <p class="card-num">05</p>
+            <h3><a href="references.html">References</a></h3>
+            <p>Sources and learning resources.</p>
+          </li>
+          <li class="card">
+            <p class="card-num">06</p>
+            <h3><a href="about.html">About</a></h3>
+            <p>The author and this project.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Key terms -->
+    <section class="section">
+      <div class="container narrow">
+        <p class="eyebrow">Key Terms</p>
+        <h2>Words you will see on this site</h2>
+        <ul class="term-list">
+          <li>HTTP</li>
+          <li>HTTPS</li>
+          <li>Client</li>
+          <li>Server</li>
+          <li>Request</li>
+          <li>Response</li>
+          <li>Status Code</li>
+          <li>Header</li>
+          <li>TLS</li>
+          <li>Multiplexing</li>
+          <li>QUIC</li>
+        </ul>
+        <figure class="figure">
+          <img src="images/version-timeline.svg" alt="Timeline of HTTP versions from HTTP/0.9 in 1991 to HTTP/3 in 2022" width="640" height="170">
+          <figcaption>Figure 1. Major HTTP versions over time.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site footer: the same on every page, includes the class project note -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-title">The Evolution of HTTP</p>
+        <p>A research site on how the web's main protocol has changed from 1991 to today.</p>
+      </div>
+      <div>
+        <p class="footer-title">Pages</p>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-http-works.html">How HTTP Works</a></li>
+          <li><a href="http-versions.html">HTTP Versions</a></li>
+          <li><a href="https-security.html">HTTPS and Security</a></li>
+          <li><a href="key-concepts.html">Key Concepts</a></li>
+          <li><a href="references.html">References</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-title">Class Project</p>
+        <p>This site is a class project for
+          <a href="https://ksuweb.github.io/IT3203/">IT 3203 Web Development</a>
+          at Kennesaw State University.</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Julien McDaniel</p>
+      <p><a href="#top">Back to top</a></p>
+    </div>
+  </footer>
+</body>
+</html>

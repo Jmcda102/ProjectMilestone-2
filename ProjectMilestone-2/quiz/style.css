@@ -1,0 +1,292 @@
+/*
+  File: quiz/style.css
+  Project: IT 3203 Web Development, Milestone 2
+  Author: Julien McDaniel
+  Purpose: Styles for the HTTP quiz page. Uses the same colors as the main site.
+
+  Color plan:
+    Dark slate  #16222f  (headings, header, footer)
+    Text gray   #2c3846  (body text)
+    Light gray  #f6f8fa  (page background)
+    Teal        #0f5e6e  (links, buttons)
+    Light teal  #e3eff1  (tinted boxes)
+    Border gray #e1e6eb  (lines and borders)
+    Green       #1e7b3a  (correct answers)
+    Red         #b3261e  (wrong answers)
+*/
+
+/* ===== 1. Basic page settings ===== */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #2c3846;
+  background-color: #f6f8fa;
+}
+
+h1, h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  color: #16222f;
+  margin-top: 0;
+}
+
+a {
+  color: #0f5e6e;
+}
+
+a:hover {
+  color: #16222f;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== 2. Header and menu (Flexbox layout, same look as the main site) ===== */
+
+.site-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e1e6eb;
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  max-width: 1100px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.brand {
+  color: #16222f;
+  text-decoration: none;
+}
+
+.brand-mark {
+  background-color: #0f5e6e;
+  color: #ffffff;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 4px 8px;
+  margin-right: 8px;
+}
+
+.brand-name {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+}
+
+.main-menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-menu a {
+  display: block;
+  padding: 8px 12px;
+  color: #2c3846;
+  text-decoration: none;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.main-menu a:hover {
+  background-color: #e3eff1;
+  color: #0f5e6e;
+}
+
+.main-menu a.active {
+  background-color: #e3eff1;
+  color: #0f5e6e;
+  font-weight: bold;
+}
+
+/* ===== 3. Quiz layout ===== */
+
+main {
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.intro {
+  margin-bottom: 20px;
+}
+
+/* Each question is a white card */
+.question {
+  background-color: #ffffff;
+  border: 1px solid #e1e6eb;
+  border-left: 5px solid #0f5e6e;
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin: 0 0 18px 0;
+}
+
+.question legend {
+  font-weight: bold;
+  color: #16222f;
+  padding: 0 4px;
+}
+
+/* Put each answer choice on its own line */
+.question label {
+  display: block;
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.question label:hover {
+  background-color: #e3eff1;
+}
+
+.question input[type="text"] {
+  width: 100%;
+  max-width: 300px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #c4ccd4;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
+.question input[type="text"]:focus {
+  outline: 2px solid #0f5e6e;
+}
+
+/* ===== 4. Buttons ===== */
+
+.button-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.button {
+  background-color: #0f5e6e;
+  color: #ffffff;
+  border: 2px solid #0f5e6e;
+  padding: 10px 22px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #16222f;
+  border-color: #16222f;
+}
+
+.button-outline {
+  background-color: #ffffff;
+  color: #0f5e6e;
+}
+
+.button-outline:hover {
+  color: #ffffff;
+}
+
+/* ===== 5. Feedback and results (class selectors added by script.js) ===== */
+
+.feedback {
+  margin: 8px 0 0 0;
+  font-weight: bold;
+}
+
+.question.correct {
+  border-left-color: #1e7b3a;
+  background-color: #eef8f0;
+}
+
+.question.incorrect {
+  border-left-color: #b3261e;
+  background-color: #fbefee;
+}
+
+.question.unanswered {
+  border-left-color: #c77700;
+}
+
+.correct .feedback {
+  color: #1e7b3a;
+}
+
+.incorrect .feedback {
+  color: #b3261e;
+}
+
+.form-message {
+  color: #b3261e;
+  font-weight: bold;
+  min-height: 1em;
+}
+
+.results {
+  background-color: #e3eff1;
+  border: 1px solid #e1e6eb;
+  border-radius: 6px;
+  padding: 20px;
+  margin-top: 24px;
+}
+
+.score-text {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0 0 6px 0;
+}
+
+.pass-text {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.pass {
+  color: #1e7b3a;
+}
+
+.fail {
+  color: #b3261e;
+}
+
+/* Hides the results box until the quiz is submitted */
+.hidden {
+  display: none;
+}
+
+/* ===== 6. Footer ===== */
+
+.site-footer {
+  background-color: #16222f;
+  color: #ffffff;
+  padding: 16px 0;
+  font-size: 15px;
+}
+
+.site-footer a {
+  color: #9fd3dc;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}

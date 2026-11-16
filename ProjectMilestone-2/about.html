@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!--
+  File: about.html
+  Page: About
+  Project: IT 3203 Web Development, Milestone 1
+  Author: Julien McDaniel
+  Purpose: About the author and this project.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="About the author and this project.">
+  <title>About | The Evolution of HTTP</title>
+  <!-- One shared style sheet for the whole site -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+  <!-- Site header: logo and main menu, the same on every page -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">HTTP</span>
+        <span class="brand-name">The Evolution of HTTP</span>
+      </a>
+      <nav class="main-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-http-works.html">How HTTP Works</a></li>
+          <li><a href="http-versions.html">HTTP Versions</a></li>
+          <li><a href="https-security.html">HTTPS and Security</a></li>
+          <li><a href="key-concepts.html">Key Concepts</a></li>
+          <li><a href="quiz/index.html">Quiz</a></li>
+          <li><a href="references.html">References</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page banner with the page title and a short summary -->
+  <div class="page-banner">
+    <div class="container">
+      <p class="eyebrow">Author and Project</p>
+      <h1>About</h1>
+      <p class="lead">A short introduction to who built this site and how the project is organized.</p>
+    </div>
+  </div>
+
+  <!-- Two column layout (CSS grid): main content and sidebar -->
+  <div class="container page-layout">
+    <main class="content">
+        <section id="me" class="content-section">
+          <h2>About Me</h2>
+          <div class="profile">
+            <img class="avatar" src="images/avatar.svg" alt="Initials JM for Julien McDaniel" width="96" height="96">
+            <div>
+              <h3>Julien McDaniel</h3>
+              <p>I am an Information Technology student at Kennesaw State University. I also work in
+                property management, where I organize maintenance work orders and communicate with
+                property owners about repairs.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="resume" class="content-section">
+          <h2>Mini Resume</h2>
+          <div class="resume-grid">
+            <div class="resume-block">
+              <h3>Education</h3>
+              <ul>
+                <li>Kennesaw State University, Information Technology</li>
+              </ul>
+            </div>
+            <div class="resume-block">
+              <h3>Skills</h3>
+              <ul>
+                <li>HTML, CSS, and GitHub Pages</li>
+                <li>Python programming</li>
+                <li>Operating systems and networking</li>
+                <li>Cryptography and blockchain concepts</li>
+              </ul>
+            </div>
+            <div class="resume-block">
+              <h3>Experience</h3>
+              <ul>
+                <li>Property management operations: work orders, contractor coordination, and owner communication</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="project" class="content-section">
+          <h2>About This Project</h2>
+          <p>This website is the term project for IT 3203 Web Development. It builds on my
+            Assignment 1 research on the evolution of HTTP. The site is being built in three milestones:</p>
+          <div class="table-wrap">
+            <table class="data-table">
+              <caption>Table 5. Project milestones</caption>
+              <thead>
+                <tr><th>Milestone</th><th>Focus</th><th>Status</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>Informational pages with HTML and CSS</td><td>Complete</td></tr>
+                <tr><td>2</td><td>A JavaScript quiz to test what you learned</td><td>Coming next</td></tr>
+                <tr><td>3</td><td>Responsive design for phones and tablets</td><td>Planned</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+    </main>
+
+    <!-- Sidebar: links to each section on this page -->
+    <aside class="sidebar">
+      <div class="side-panel">
+        <h2>On This Page</h2>
+        <ol>
+            <li><a href="#me">About Me</a></li>
+            <li><a href="#resume">Mini Resume</a></li>
+            <li><a href="#project">About This Project</a></li>
+        </ol>
+      </div>
+      <div class="side-panel side-note">
+        <h2>Explore</h2>
+        <p>New to HTTP? Start with <a href="how-http-works.html">How HTTP Works</a>, then read the <a href="key-concepts.html">Key Concepts</a>.</p>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Site footer: the same on every page, includes the class project note -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-title">The Evolution of HTTP</p>
+        <p>A research site on how the web's main protocol has changed from 1991 to today.</p>
+      </div>
+      <div>
+        <p class="footer-title">Pages</p>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-http-works.html">How HTTP Works</a></li>
+          <li><a href="http-versions.html">HTTP Versions</a></li>
+          <li><a href="https-security.html">HTTPS and Security</a></li>
+          <li><a href="key-concepts.html">Key Concepts</a></li>
+          <li><a href="references.html">References</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-title">Class Project</p>
+        <p>This site is a class project for
+          <a href="https://ksuweb.github.io/IT3203/">IT 3203 Web Development</a>
+          at Kennesaw State University.</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Julien McDaniel</p>
+      <p><a href="#top">Back to top</a></p>
+    </div>
+  </footer>
+</body>
+</html>

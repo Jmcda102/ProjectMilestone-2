@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--
+  File: quiz/index.html
+  Page: HTTP Quiz
+  Project: IT 3203 Web Development, Milestone 2
+  Author: Julien McDaniel
+  Purpose: A five question quiz on the evolution of HTTP.
+           JavaScript in script.js checks the answers and shows the score.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Five question quiz on the evolution of HTTP.">
+  <title>Quiz | The Evolution of HTTP</title>
+  <!-- Style sheet for the quiz page -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+  <!-- Site header: same main menu as the other pages -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark">HTTP</span>
+        <span class="brand-name">The Evolution of HTTP</span>
+      </a>
+      <nav class="main-menu">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../how-http-works.html">How HTTP Works</a></li>
+          <li><a href="../http-versions.html">HTTP Versions</a></li>
+          <li><a href="../https-security.html">HTTPS and Security</a></li>
+          <li><a href="../key-concepts.html">Key Concepts</a></li>
+          <li><a href="index.html" class="active">Quiz</a></li>
+          <li><a href="../references.html">References</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <h1>HTTP Quiz</h1>
+      <p>Test what you learned about HTTP. Answer all five questions, then press
+        <strong>Submit Quiz</strong>. You need 4 out of 5 (80%) to pass.</p>
+    </section>
+
+    <!-- Message area for "please answer every question" warnings -->
+    <p id="form-message" class="form-message" aria-live="polite"></p>
+
+    <!-- The quiz form. novalidate lets script.js handle the checking. -->
+    <form id="quiz-form" novalidate>
+
+      <!-- Question 1: fill in the blank -->
+      <fieldset class="question" id="q1-box">
+        <legend>1. Fill in the blank</legend>
+        <label for="q1">HTTP stands for HyperText ______ Protocol.</label>
+        <input type="text" id="q1" name="q1" placeholder="Type one word" autocomplete="off">
+        <p class="feedback" id="q1-feedback"></p>
+      </fieldset>
+
+      <!-- Question 2: multiple choice -->
+      <fieldset class="question" id="q2-box">
+        <legend>2. Which HTTP version was the first official standard, released in 1997?</legend>
+        <label><input type="radio" name="q2" value="a"> HTTP/0.9</label>
+        <label><input type="radio" name="q2" value="b"> HTTP/1.1</label>
+        <label><input type="radio" name="q2" value="c"> HTTP/2</label>
+        <label><input type="radio" name="q2" value="d"> HTTP/3</label>
+        <p class="feedback" id="q2-feedback"></p>
+      </fieldset>
+
+      <!-- Question 3: multiple choice -->
+      <fieldset class="question" id="q3-box">
+        <legend>3. Which status code means the requested page was not found?</legend>
+        <label><input type="radio" name="q3" value="a"> 200</label>
+        <label><input type="radio" name="q3" value="b"> 301</label>
+        <label><input type="radio" name="q3" value="c"> 404</label>
+        <label><input type="radio" name="q3" value="d"> 500</label>
+        <p class="feedback" id="q3-feedback"></p>
+      </fieldset>
+
+      <!-- Question 4: multiple choice -->
+      <fieldset class="question" id="q4-box">
+        <legend>4. HTTP/3 runs on top of which transport protocol?</legend>
+        <label><input type="radio" name="q4" value="a"> TCP</label>
+        <label><input type="radio" name="q4" value="b"> QUIC (over UDP)</label>
+        <label><input type="radio" name="q4" value="c"> FTP</label>
+        <label><input type="radio" name="q4" value="d"> SMTP</label>
+        <p class="feedback" id="q4-feedback"></p>
+      </fieldset>
+
+      <!-- Question 5: select all that apply (more than one answer) -->
+      <fieldset class="question" id="q5-box">
+        <legend>5. Which of these are HTTP request methods? (Select all that apply)</legend>
+        <label><input type="checkbox" name="q5" value="GET"> GET</label>
+        <label><input type="checkbox" name="q5" value="POST"> POST</label>
+        <label><input type="checkbox" name="q5" value="SEND"> SEND</label>
+        <label><input type="checkbox" name="q5" value="DELETE"> DELETE</label>
+        <label><input type="checkbox" name="q5" value="OPEN"> OPEN</label>
+        <p class="feedback" id="q5-feedback"></p>
+      </fieldset>
+
+      <!-- Buttons -->
+      <div class="button-row">
+        <button type="submit" class="button" id="submit-btn">Submit Quiz</button>
+        <button type="reset" class="button button-outline" id="reset-btn">Retake Quiz</button>
+      </div>
+    </form>
+
+    <!-- Results box. Hidden until the quiz is submitted. -->
+    <section id="results" class="results hidden" aria-live="polite">
+      <h2>Your Results</h2>
+      <p id="score-text" class="score-text"></p>
+      <p id="pass-text" class="pass-text"></p>
+    </section>
+  </main>
+
+  <!-- Site footer: includes the class project note -->
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <p>This site is a class project for
+        <a href="https://ksuweb.github.io/IT3203/">IT 3203 Web Development</a>
+        at Kennesaw State University.</p>
+      <p>&copy; 2026 Julien McDaniel | <a href="#top">Back to top</a></p>
+    </div>
+  </footer>
+
+  <!-- Quiz logic. Loaded last so the page is ready before it runs. -->
+  <script src="script.js"></script>
+</body>
+</html>
