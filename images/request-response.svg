@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 260" font-family="Arial, Helvetica, sans-serif">
+  <!-- Diagram of one HTTP request and response -->
+  <rect width="640" height="260" fill="#ffffff"/>
+  <rect x="30" y="60" width="170" height="120" rx="10" fill="#f4f7f9" stroke="#16222f" stroke-width="2"/>
+  <text x="115" y="115" text-anchor="middle" font-size="19" font-weight="bold" fill="#16222f">Client</text>
+  <text x="115" y="140" text-anchor="middle" font-size="14" fill="#5a6676">Web browser</text>
+  <rect x="440" y="60" width="170" height="120" rx="10" fill="#f4f7f9" stroke="#16222f" stroke-width="2"/>
+  <text x="525" y="115" text-anchor="middle" font-size="19" font-weight="bold" fill="#16222f">Server</text>
+  <text x="525" y="140" text-anchor="middle" font-size="14" fill="#5a6676">Web host</text>
+  <line x1="210" y1="95" x2="425" y2="95" stroke="#0f5e6e" stroke-width="3"/>
+  <polygon points="425,87 440,95 425,103" fill="#0f5e6e"/>
+  <text x="320" y="82" text-anchor="middle" font-size="14" fill="#16222f">Request: GET /index.html</text>
+  <line x1="215" y1="150" x2="430" y2="150" stroke="#5a6676" stroke-width="3" stroke-dasharray="8 5"/>
+  <polygon points="215,142 200,150 215,158" fill="#5a6676"/>
+  <text x="320" y="176" text-anchor="middle" font-size="14" fill="#16222f">Response: 200 OK + the page</text>
+  <text x="320" y="230" text-anchor="middle" font-size="13" fill="#5a6676">Every page load starts with a request and ends with a response.</text>
+</svg>
